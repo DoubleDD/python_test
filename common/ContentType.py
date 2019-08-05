@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 
-mime = {
+file = {
     ".*": "application/octet-stream",
     ".001": "application/x-001",
     ".301": "application/x-301",
@@ -325,3 +325,10 @@ mime = {
     ".x_b": "application/x-x_b",
     ".x_t": "application/x-x_t"
 }
+
+
+class http:
+    form = 'application/x-www-form-urlencoded'
+    multipart ='multipart/form-data'
+    json ='application/json;charset=UTF-8'
+    text = 'text/html;charset=UTF-8'

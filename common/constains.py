@@ -21,3 +21,20 @@ class info:
 class base64Upload:
     fastdfs = build_url('/upload-base64/fastdfs')
     oss = build_url('/upload-base64/oss')
+
+
+class richtext:
+    __base_fastdfs = '/richtext/fastdfs'
+    __base_oss = '/richtext/oss'
+    fastdfs = build_url(__base_fastdfs)
+    oss = build_url(__base_oss)
+    streamFastdfs = build_url(__base_fastdfs+'/stream')
+    streamOss = build_url(__base_oss+'/stream')
+    downloadFastdfs = build_url(__base_fastdfs+'/download')
+    downloadOss = build_url(__base_oss+'/download')
+    cropperFastdfs = build_url(__base_fastdfs+'/cropper')
+    cropperOss = build_url(__base_oss+'/cropper')
+    simpleFastdfs = build_url(__base_fastdfs+'/simple')
+    simpleAuthFastdfs = build_url(__base_fastdfs+'/simple-auth')
+    simpleOss = build_url(__base_oss + '/simple')
+    simpleAuthOss = build_url(__base_oss + '/simple-auth')
