@@ -1,0 +1,2 @@
+requests==2.19.1
+HtmlTestRunner==0.8.0
