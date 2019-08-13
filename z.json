@@ -1,0 +1,49 @@
+[
+  {
+    "options": {},
+    "items": [
+      {
+        "orderId": "中国移动通信集团财务公司",
+        "orderNo": "02fcc016-de93-4a23-b36b-dce40587405e",
+        "resourceNum": 10,
+        "grantType": "卓望数码技术（深圳）有限公司",
+        "effectiveTime": 1234567890,
+        "failureTime": 1234567890,
+        "createTime": 1234567890
+      }
+    ],
+    "recordCount": 1
+  },
+  {
+    "options": {},
+    "items": [
+      {
+        "name": "课程名称",
+        "publishClient": "0",
+        "status": 1,
+        "companyName": "卓望数码技术（深圳）有限公司",
+        "publishTime": 1234567890,
+        "url": "https://zxy9.zhixueyun.com/#/study/subject/detail/52b82c07-5a2c-4369-b071-22c61369f800"
+      }
+    ],
+    "recordCount": 1
+  },
+  {
+    "list": [
+      {
+        "id": "02fcc016-de93-4a23-b36b-dce40587405e",
+        "parentId": "02fcc016-de93-4a23-b36b-dce40587405e",
+        "isParent": true,
+        "name": "课程名称",
+        "level": 2,
+        "depth": "",
+        "path": "",
+        "order": "",
+        "status": 1,
+        "createTime": 1234567890,
+        "companyId": "02fcc016-de93-4a23-b36b-dce40587405e"
+      }
+    ]
+  }
+]
+

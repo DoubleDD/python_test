@@ -2,7 +2,7 @@
 
 URL_API = "http://localhost:10092/api/v1/file"
 URL_AUTH = 'https://dev9.zhixueyun.com/oauth/api/v1/auth'
-
+CONTENT_API = 'http://localhost:8888/api/v1/content'
 
 def build_url(url):
     return URL_API+url
