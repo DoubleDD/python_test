@@ -1,6 +1,5 @@
 # -*- coding:utf-8 -*-
 import requests as r
-from common.constains import URL_API
 import unittest
 import json
 
@@ -18,10 +17,14 @@ class HttpUtils:
         Returns:
             response -- [description]
         """
+        print("请求url："+url)
+        print("请求数据：")
+        self.logJson(jsonObj=data)
         response = r.post(url=url, data=data, files=files, headers=headers)
         return response
 
     def get(self, url, headers=None):
+        print("请求url："+url)
         response = r.get(url, headers=headers)
         return response
 

@@ -44,6 +44,46 @@
         "companyId": "02fcc016-de93-4a23-b36b-dce40587405e"
       }
     ]
-  }
+  },
+  [
+    {
+      "code": "cmcc",
+      "createTime": 1502258030661,
+      "depth": 1,
+      "id": "1",
+      "isParent": false,
+      "level": 2,
+      "name": "深圳知学云dev9",
+      "order": 1,
+      "parentId": null,
+      "path": "1,",
+      "status": 1
+    },
+    {
+      "code": "zz_BA736b9fc3",
+      "createTime": 1510734585311,
+      "depth": 4,
+      "id": "5fec494f-cc04-4b36-84a5-939fdfb141c8",
+      "isParent": false,
+      "level": 3,
+      "name": "33eirhi",
+      "order": 1,
+      "parentId": "167982884",
+      "path": "1,167982884,5fec494f-cc04-4b36-84a5-939fdfb141c8,",
+      "status": 1
+    },
+    {
+      "code": "zz_BA35d2f734",
+      "createTime": 1511837523313,
+      "depth": 4,
+      "id": "c1303148-82d3-4419-969f-8b57e16b0594",
+      "isParent": false,
+      "level": 4,
+      "name": "验证权限部门",
+      "order": 1,
+      "parentId": "8c00dfcf-3bf5-4172-9521-e678166de2ab",
+      "path": "1,8c00dfcf-3bf5-4172-9521-e678166de2ab,c1303148-82d3-4419-969f-8b57e16b0594,",
+      "status": 1
+    }
+  ]
 ]
-

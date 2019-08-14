@@ -20,6 +20,8 @@ class TestcompanyConfig(unittest.TestCase):
         pass
 
     def test_callbackConfig_insert(self):
+        """新增企业鉴权接口配置信息
+        """
         data = {
             'companyId': '61e04cca-9213-451b-94ae-8d4dc2a1a5ea',
             'callbackUrl': 'https://test9.zhixueyun.com/#/home'
@@ -29,6 +31,8 @@ class TestcompanyConfig(unittest.TestCase):
         assert result.status_code == 200
 
     def test_callbackConfig_update(self):
+        """修改企业鉴权接口配置信息
+        """
         data = {
             'companyId': '61e04cca-9213-451b-94ae-8d4dc2a1a5ea',
             'callbackUrl': 'http://confluence.zhixueyun.com/pages/viewpage.action?pageId=14109785'
