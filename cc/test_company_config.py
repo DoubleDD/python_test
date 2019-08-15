@@ -14,10 +14,8 @@ class TestcompanyConfig(unittest.TestCase):
         self.r = HttpUtils()
 
     def tearDown(self):
-        '''
-        执行结束恢复环境
-        '''
-        pass
+        assert self.result.status_code == 200
+        self.r.logJson(jsonStr=self.result.text)
 
     def test_callbackConfig_insert(self):
         """新增企业鉴权接口配置信息
@@ -26,9 +24,7 @@ class TestcompanyConfig(unittest.TestCase):
             'companyId': '61e04cca-9213-451b-94ae-8d4dc2a1a5ea',
             'callbackUrl': 'https://test9.zhixueyun.com/#/home'
         }
-        result = self.r.post(company_config.callbackConfig, data=data)
-        self.r.logJson(jsonStr=result.text)
-        assert result.status_code == 200
+        self.result = self.r.post(company_config.CALLBACK_CONFIG, data=data)
 
     def test_callbackConfig_update(self):
         """修改企业鉴权接口配置信息
@@ -37,9 +33,7 @@ class TestcompanyConfig(unittest.TestCase):
             'companyId': '61e04cca-9213-451b-94ae-8d4dc2a1a5ea',
             'callbackUrl': 'http://confluence.zhixueyun.com/pages/viewpage.action?pageId=14109785'
         }
-        result = self.r.post(company_config.callbackConfig, data=data)
-        self.r.logJson(jsonStr=result.text)
-        assert result.status_code == 200
+        self.result = self.r.post(company_config.CALLBACK_CONFIG, data=data)
 
 
 if __name__ == "__main__":

@@ -1,23 +1,28 @@
 # -*- coding:utf-8 -*-
+from init_env import BASE_DIR
+from common.env_config import ServerCC
 
-URL_API = "http://localhost:8888/api/v1/content"
+env = ServerCC.DEV
 URL_AUTH = 'https://dev9.zhixueyun.com/oauth/api/v1/auth'
 
 
 def build_url(url):
-    return URL_API+url
+    server = ServerCC()
+    return server.getEnv(env)[0] + "/api/v1/content" + url
 
 
 class company_config:
     url = '/company-config'
-    callbackConfig = build_url(url+'/login-config')
+    CALLBACK_CONFIG = build_url(url+'/login-config')
 
 
 class company_resource:
     url = '/company-resources'
-    list = build_url(url + '/list')
+    LIST = build_url(url + '/list')
+    GRANT_RESOURCE_PROVIDER = build_url(url+'/grant/resource-provider')
+
 
 class Order:
     url = '/order'
-    list = build_url(url+'/list')
-    detail = build_url(url+'/detail/')
+    LIST = build_url(url+'/list')
+    DETAIL = build_url(url+'/detail/')
