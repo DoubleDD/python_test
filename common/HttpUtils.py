@@ -17,8 +17,8 @@ class HttpUtils:
         Returns:
             response -- [description]
         """
-        print("请求url：\n"+url)
-        print("请求数据：")
+        print("\n请求url：\n"+url)
+        print("\n请求数据：")
         self.logJson(jsonObj=data)
         response = r.post(url=url, data=data, files=files, headers=headers)
         return response

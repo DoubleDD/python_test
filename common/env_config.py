@@ -7,12 +7,12 @@ class ServerCC:
 
     def __local(self):
         url = 'http://localhost:8888'
-        auth_url = 'https://dev9.zhixueyun.com/oauth/api/v1/auth'
+        auth_url = 'https://rasdev9.zhixueyun.com/oauth/api/v1/auth'
         return (url, auth_url)
 
     def __dev(self):
-        url = 'http://rasdev9.zhixueyun.com'
-        auth_url = 'https://dev9.zhixueyun.com/oauth/api/v1/auth'
+        url = 'https://rasdev9.zhixueyun.com'
+        auth_url = 'https://rasdev9.zhixueyun.com/oauth/api/v1/auth'
         return (url, auth_url)
 
     def getEnv(self, env=1):
