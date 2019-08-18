@@ -21,7 +21,7 @@ class TestBase64(unittest.TestCase):
         """测试用例初始化操作
         """
         self.r = HttpUtils()
-        file = open(BASE_DIR+'/resouces/plant.jpg', 'rb')
+        file = open(BASE_DIR+'/resources/plant.jpg', 'rb')
         filename = file.name
         suffix = os.path.splitext(filename)[1]
         contentType = mime[suffix]
