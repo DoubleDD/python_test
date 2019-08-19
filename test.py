@@ -13,6 +13,6 @@ def test():
 
 if __name__ == "__main__":
     test()
-    file = open('./resouces/stock-photo-166606087.jpg', 'rb')
+    file = open('./resources/stock-photo-166606087.jpg', 'rb')
     info = os.path.splitext(file.name)
     print(info)

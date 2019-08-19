@@ -7,15 +7,15 @@ import unittest
 
 
 class TestIndex(unittest.TestCase):
-    '''indexController中各个方法的测试用例
-    '''
+    """indexController中各个方法的测试用例
+    """
 
     def setUp(self):
-        '''
+        """
         测试用例初始化操作
-        '''
+        """
         self.r = HttpUtils()
-        self.files = {'file': open(BASE_DIR+'/resouces/test.txt', 'rb')}
+        self.files = {'file': open(BASE_DIR+'/resources/test.md', 'rb')}
         self.data = {
             'id': '61e04cca-9213-451b-94ae-8d4dc2a1a5ea',
             'height': 300,
@@ -23,9 +23,9 @@ class TestIndex(unittest.TestCase):
         }
 
     def tearDown(self):
-        '''
+        """
         执行结束恢复环境
-        '''
+        """
         pass
 
     def test_fastdfsTest(self):
