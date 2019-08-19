@@ -17,6 +17,7 @@ class TestCompanyResource(TestCase):
 
     def tearDown(self):
         result = self.result
+        print("\n接口响应：")
         r.logJson(jsonStr=result.text)
         assert result.status_code == 200, "请求状态码应为 200"
 
@@ -30,11 +31,11 @@ class TestCompanyResource(TestCase):
         """资源配置接口——按资源方对接
         """
         data = {
-            'providerIds': '019aa10e-6f14-4d87-9590-fd24a31821ac',
-            'companyId': '000ed610-1e6f-4414-9783-e2810a2cb22e',
+            'providerIds': '3166ddf9-bbfd-4f24-b686-4a4ee887cabb,c670ee7f-a0b5-4c9d-ae7a-0d32ff5296fb',
+            'companyId': 'fcfc12fc-4ecf-46e2-a48f-ba5159f55908',
             'grantType': 1,
-            'effectiveTime': '2019-08-04 12:00:00',
-            'failureTime': '2019-09-05 12:00:00',
+            'effectiveTime': '2019-08-15 00:00',
+            'failureTime': '2019-09-05 12:00',
             'number': 10
         }
         self.result = r.post(
@@ -43,6 +44,6 @@ class TestCompanyResource(TestCase):
 
 if __name__ == "__main__":
     runTests([
-        # TestCompanyResource("test_grant_resource"),
-        TestCompanyResource("test_list")
+        TestCompanyResource("test_grant_resource"),
+        # TestCompanyResource("test_list")
     ])

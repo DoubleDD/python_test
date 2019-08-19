@@ -18,14 +18,14 @@ class TestOrder(TestCase):
     def test_list(self):
         """订单列表接口
         """
-        companyId = ''
-        url = Order.LIST + "?page=1&pageSize=10&"+companyId
+        companyId = 'fcfc12fc-4ecf-46e2-a48f-ba5159f55908'
+        url = Order.LIST + "?page=1&pageSize=10&companyId="+companyId
         self.result = self.r.get(url)
 
     def test_detail(self):
         """订单详情
         """
-        orderId = ''
+        orderId = 'fa8ee131-4665-4bc6-86be-bdc6c300ed14'
         url = Order.DETAIL + orderId + "?page=1&pageSize=10"
         self.result = self.r.get(url)
 
