@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 from init_env import BASE_DIR
 from common.HttpUtils import HttpUtils
-from common.cc import company_resource,get_token
+from common.cc import company_resource, get_token
 from common.base_test import runTests
 from unittest import TestCase
 
@@ -24,8 +24,14 @@ class TestCompanyResource(TestCase):
     def test_list(self):
         """接入企业管理列表接口
         """
-        url = company_resource.LIST+"?page=1&pageSize=10"
-        self.result = r.get(url)
+        page = 1
+        pageSize = 4
+        uri = 'human/access-enterprise'
+        companyName = ''
+        params = "?page=%d&pageSize=%d&uri=%s&companyName=%s" % (
+            page, pageSize, uri, companyName)
+        url = company_resource.LIST + params
+        self.result = r.get(url, headers=self.header)
 
     def test_grant_resource(self):
         """资源配置接口——按资源方对接
@@ -44,6 +50,6 @@ class TestCompanyResource(TestCase):
 
 if __name__ == "__main__":
     runTests([
-        TestCompanyResource("test_grant_resource"),
-        # TestCompanyResource("test_list")
+        # TestCompanyResource("test_grant_resource"),
+        TestCompanyResource("test_list")
     ])

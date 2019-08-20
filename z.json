@@ -1,89 +1,15 @@
-[
-  {
-    "options": {},
-    "items": [
-      {
-        "orderId": "中国移动通信集团财务公司",
-        "orderNo": "02fcc016-de93-4a23-b36b-dce40587405e",
-        "resourceNum": 10,
-        "grantType": "卓望数码技术（深圳）有限公司",
-        "effectiveTime": 1234567890,
-        "failureTime": 1234567890,
-        "createTime": 1234567890
-      }
-    ],
-    "recordCount": 1
-  },
-  {
-    "options": {},
-    "items": [
-      {
-        "name": "课程名称",
-        "publishClient": "0",
-        "status": 1,
-        "companyName": "卓望数码技术（深圳）有限公司",
-        "publishTime": 1234567890,
-        "url": "https://zxy9.zhixueyun.com/#/study/subject/detail/52b82c07-5a2c-4369-b071-22c61369f800"
-      }
-    ],
-    "recordCount": 1
-  },
-  {
-    "list": [
-      {
-        "id": "02fcc016-de93-4a23-b36b-dce40587405e",
-        "parentId": "02fcc016-de93-4a23-b36b-dce40587405e",
-        "isParent": true,
-        "name": "课程名称",
-        "level": 2,
-        "depth": "",
-        "path": "",
-        "order": "",
-        "status": 1,
-        "createTime": 1234567890,
-        "companyId": "02fcc016-de93-4a23-b36b-dce40587405e"
-      }
-    ]
-  },
-  [
+{
+  "items": [
     {
-      "code": "cmcc",
-      "createTime": 1502258030661,
-      "depth": 1,
-      "id": "1",
-      "isParent": false,
-      "level": 2,
-      "name": "深圳知学云dev9",
-      "order": 1,
-      "parentId": null,
-      "path": "1,",
-      "status": 1
-    },
-    {
-      "code": "zz_BA736b9fc3",
-      "createTime": 1510734585311,
-      "depth": 4,
-      "id": "5fec494f-cc04-4b36-84a5-939fdfb141c8",
-      "isParent": false,
-      "level": 3,
-      "name": "33eirhi",
-      "order": 1,
-      "parentId": "167982884",
-      "path": "1,167982884,5fec494f-cc04-4b36-84a5-939fdfb141c8,",
-      "status": 1
-    },
-    {
-      "code": "zz_BA35d2f734",
-      "createTime": 1511837523313,
-      "depth": 4,
-      "id": "c1303148-82d3-4419-969f-8b57e16b0594",
-      "isParent": false,
-      "level": 4,
-      "name": "验证权限部门",
-      "order": 1,
-      "parentId": "8c00dfcf-3bf5-4172-9521-e678166de2ab",
-      "path": "1,8c00dfcf-3bf5-4172-9521-e678166de2ab,c1303148-82d3-4419-969f-8b57e16b0594,",
+      "companyId": "7483d15b-2188-43cf-b3fe-c0559d8c1192",
+      "companyName": "\u70fd\u706b\u901a\u4fe1",
+      "createTime": null,
+      "grantTime": null,
+      "id": "b26fe57f-75a1-4a37-b3fe-c39c73112337",
+      "resourceNum": 0,
+      "resourceProviderNum": 0,
       "status": 1
     }
-  ]
-]
+  ],
+  "recordCount": 1
+}

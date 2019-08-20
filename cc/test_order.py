@@ -25,7 +25,7 @@ class TestOrder(TestCase):
     def test_detail(self):
         """订单详情
         """
-        orderId = 'fa8ee131-4665-4bc6-86be-bdc6c300ed14'
+        orderId = 'fc119be6-b0b0-48df-b0b7-f260b995c5b7'
         url = Order.DETAIL + orderId + "?page=1&pageSize=10"
         self.result = self.r.get(url)
 
