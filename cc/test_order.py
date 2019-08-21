@@ -1,9 +1,10 @@
 # -*- coding:utf-8 -*-
-from init_env import BASE_DIR
-from common.HttpUtils import HttpUtils
-from common.cc import Order
-from common.base_test import run_tests
 from unittest import TestCase
+
+from common.base_test import run_tests
+from common.cc import Order
+from common.HttpUtils import HttpUtils
+from init_env import BASE_DIR
 
 
 class TestOrder(TestCase):
