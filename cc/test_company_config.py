@@ -1,16 +1,16 @@
 # -*- coding:utf-8 -*-
-from init_env import BASE_DIR
-from common.HttpUtils import HttpUtils
-from common.cc import company_config
-from common.base_test import runTests
 import unittest
+import init_env
+from common.HttpUtils import HttpUtils
+from common.base_test import runTests
+from common.cc import company_config
 
 
 class TestcompanyConfig(unittest.TestCase):
     def setUp(self):
-        '''
+        """
         测试用例初始化操作
-        '''
+        """
         self.r = HttpUtils()
 
     def tearDown(self):
@@ -38,8 +38,8 @@ class TestcompanyConfig(unittest.TestCase):
     def test_callbackConfig_get(self):
         """查询企业鉴权接口配置信息
         """
-        companyId = '61e04cca-9213-451b-94ae-8d4dc2a1a5ea'
-        url = company_config.CALLBACK_CONFIG + f'?companyId={companyId}'
+        company_id = '61e04cca-9213-451b-94ae-8d4dc2a1a5ea'
+        url = company_config.CALLBACK_CONFIG + f'?companyId={company_id}'
         self.result = self.r.get(url)
 
 
