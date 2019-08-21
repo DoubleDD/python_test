@@ -35,10 +35,18 @@ class TestcompanyConfig(unittest.TestCase):
         }
         self.result = self.r.post(company_config.CALLBACK_CONFIG, data=data)
 
+    def test_callbackConfig_get(self):
+        """查询企业鉴权接口配置信息
+        """
+        companyId = '61e04cca-9213-451b-94ae-8d4dc2a1a5ea'
+        url = company_config.CALLBACK_CONFIG + f'?companyId={companyId}'
+        self.result = self.r.get(url)
+
 
 if __name__ == "__main__":
     tests = [
-        TestcompanyConfig('test_callbackConfig_insert'),
-        TestcompanyConfig('test_callbackConfig_update'),
+        # TestcompanyConfig('test_callbackConfig_insert'),
+        # TestcompanyConfig('test_callbackConfig_update'),
+        TestcompanyConfig('test_callbackConfig_get'),
     ]
     runTests(tests)
