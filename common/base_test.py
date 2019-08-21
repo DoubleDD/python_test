@@ -2,7 +2,7 @@
 import unittest
 
 
-def runTests(tests=None):
+def run_tests(tests=None):
     suit = unittest.TestSuite()
     if tests is None:
         return

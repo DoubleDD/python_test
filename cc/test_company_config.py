@@ -2,7 +2,7 @@
 import unittest
 import init_env
 from common.HttpUtils import HttpUtils
-from common.base_test import runTests
+from common.base_test import run_tests
 from common.cc import company_config
 
 
@@ -49,4 +49,4 @@ if __name__ == "__main__":
         # TestcompanyConfig('test_callbackConfig_update'),
         TestcompanyConfig('test_callbackConfig_get'),
     ]
-    runTests(tests)
+    run_tests(tests)

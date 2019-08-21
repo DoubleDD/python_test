@@ -2,7 +2,7 @@
 from init_env import BASE_DIR
 from common.HttpUtils import HttpUtils
 from common.cc import Order
-from common.base_test import runTests
+from common.base_test import run_tests
 from unittest import TestCase
 
 
@@ -31,7 +31,7 @@ class TestOrder(TestCase):
 
 
 if __name__ == "__main__":
-    runTests([
+    run_tests([
         # TestOrder("test_list"),
         TestOrder("test_detail")
     ])

@@ -2,7 +2,7 @@
 from init_env import BASE_DIR
 from common.HttpUtils import HttpUtils
 from common.cc import company_resource, get_token
-from common.base_test import runTests
+from common.base_test import run_tests
 from unittest import TestCase
 
 r = HttpUtils()
@@ -48,7 +48,7 @@ class TestCompanyResource(TestCase):
 
 
 if __name__ == "__main__":
-    runTests([
+    run_tests([
         # TestCompanyResource("test_grant_resource"),
         TestCompanyResource("test_list")
     ])
