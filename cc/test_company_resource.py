@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 from init_env import BASE_DIR
 from common.HttpUtils import HttpUtils
-from common.cc import company_resource, get_token
+from common.cc import CompanyResource, get_token
 from common.base_test import run_tests
 from unittest import TestCase
 
@@ -25,26 +25,26 @@ class TestCompanyResource(TestCase):
         """接入企业管理列表接口
         """
         page = 1
-        pageSize = 4
+        page_size = 20
         uri = 'human/access-enterprise'
-        companyName = ''
-        params = f'?page={page}&pageSize={pageSize}&uri={uri}&companyName={companyName}'
-        url = company_resource.LIST + params
+        company_name = ''
+        params = f'?page={page}&pageSize={page_size}&uri={uri}&companyName={company_name}'
+        url = CompanyResource.LIST + params
         self.result = r.get(url, headers=self.header)
 
     def test_grant_resource(self):
         """资源配置接口——按资源方对接
         """
         data = {
-            'providerIds': '3166ddf9-bbfd-4f24-b686-4a4ee887cabb,c670ee7f-a0b5-4c9d-ae7a-0d32ff5296fb',
-            'companyId': 'fcfc12fc-4ecf-46e2-a48f-ba5159f55908',
+            'providerIds': 'b7c4911b-2064-434b-aa26-2c4a86f183af',
+            'companyId': '64d63434-b903-425f-ab39-bcb1e2332fb5',
             'grantType': 1,
             'effectiveTime': '2019-08-15 00:00',
             'failureTime': '2019-09-05 12:00',
             'number': 10
         }
         self.result = r.post(
-            company_resource.GRANT_RESOURCE_PROVIDER, data=data, headers=self.header)
+            CompanyResource.GRANT_RESOURCE_PROVIDER, data=data, headers=self.header)
 
 
 if __name__ == "__main__":
