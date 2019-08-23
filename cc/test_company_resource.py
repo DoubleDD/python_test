@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-from init_env import BASE_DIR
+import init_env
 from common.HttpUtils import HttpUtils
 from common.cc import CompanyResource, get_token
 from common.base_test import run_tests
