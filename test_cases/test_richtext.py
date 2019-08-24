@@ -7,7 +7,7 @@ from test_cases.base_test import runTests
 from common.login import getToken
 from common.ContentType import http
 
-filename = BASE_DIR+'/resouces/stock.jpg'
+filename = BASE_DIR+'/resources/stock.jpg'
 
 
 class TestRichtext(unittest.TestCase):

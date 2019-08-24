@@ -1,11 +1,12 @@
 # -*- coding:utf-8 -*-
-from init_env import BASE_DIR
+import init_env
+
 from common.env_config import ServerCC
 from common.login import getToken
 
 server = ServerCC()
-# env = ServerCC.LOCAL
-env = ServerCC.DEV
+env = ServerCC.LOCAL
+# env = ServerCC.DEV
 
 
 def get_token():
@@ -25,12 +26,12 @@ def build_url(url):
     return server.getEnv(env)[0] + "/api/v1/content" + url
 
 
-class company_config:
+class CompanyConfig:
     url = '/company-config'
     CALLBACK_CONFIG = build_url(url+'/login-config')
 
 
-class company_resource:
+class CompanyResource:
     url = '/company-resources'
     LIST = build_url(url + '/list')
     GRANT_RESOURCE_PROVIDER = build_url(url+'/grant/resource-provider')
@@ -40,3 +41,8 @@ class Order:
     url = '/order'
     LIST = build_url(url+'/list')
     DETAIL = build_url(url+'/detail/')
+
+
+class CourseInfo:
+    url = '/course-info'
+    AUTH = build_url(url)

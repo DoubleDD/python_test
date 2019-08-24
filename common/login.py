@@ -7,7 +7,7 @@ import json
 import os
 
 
-token_json_path = BASE_DIR + '/resouces/token.json'
+token_json_path = BASE_DIR + '/resources/token.json'
 
 """
 获取接口调用凭证token工具
