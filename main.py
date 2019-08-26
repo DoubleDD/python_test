@@ -6,7 +6,7 @@ from common.DateUtils import DateTimeFormat
 
 
 # test_dir = init_env.BASE_DIR+'\\test_cases'
-test_dir = './test_cases'
+test_dir = './cc'
 discover = unittest.defaultTestLoader.discover(test_dir, pattern='test_*.py')
 
 

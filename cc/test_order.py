@@ -19,7 +19,6 @@ class TestOrder(TestCase):
     def test_list(self):
         """订单列表接口
         """
-
         company_id = '4e99d6ff-bb02-4343-b637-169194d81fa3'
         order_no = '1908221838213013752'
         effective_time = '2019-08-20 00:00'
