@@ -27,7 +27,7 @@ class TestCompanyResource(TestCase):
         page = 1
         page_size = 20
         uri = 'human/access-enterprise'
-        company_name = ''
+        company_name = '米'
         params = f'?page={page}&pageSize={page_size}&uri={uri}&companyName={company_name}'
         url = CompanyResource.LIST + params
         self.result = r.get(url, headers=self.header)

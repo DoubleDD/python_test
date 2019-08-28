@@ -5,8 +5,8 @@ from common.env_config import ServerCC
 from common.login import getToken
 
 server = ServerCC()
-# env = ServerCC.LOCAL
-env = ServerCC.DEV
+env = ServerCC.LOCAL
+# env = ServerCC.DEV
 
 
 def get_token():
@@ -46,3 +46,8 @@ class Order:
 class CourseInfo:
     url = '/course-info'
     AUTH = build_url(url)
+
+
+class Test:
+    url = '/test'
+    AUTH = build_url(url+'/auth')
