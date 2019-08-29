@@ -25,6 +25,8 @@ class HttpUtils:
 
     def get(self, url, headers=None):
         print("请求url：\n"+url)
+        # 设置编码
+
         response = r.get(url, headers=headers)
         return response
 

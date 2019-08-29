@@ -22,9 +22,12 @@ class TestTools(TestCase):
 
     def test_auth(self):
         """课程授权测试
-        8e775e21-8f41-4411-87c7-95c1a0b9df6c/zz_BA2be9b031
+        02c8b3d6-a9dd-4db4-8e33-bc9b0e3cfe79/zz_BA5904fe47
         """
-        course_id = '8e775e21-8f41-4411-87c7-95c1a0b9df6c'
-        org_code = 'zz_BA2783520f'
-        url = Test.AUTH + f'/{course_id}/{org_code}'
+        url = Test.AUTH + '/02c8b3d6-a9dd-4db4-8e33-bc9b0e3cfe79/zz_BA5904fe47'
         self.result = r.get(url)
+
+if __name__ == "__main__":
+    run_tests([
+        TestTools('test_auth')
+    ])
