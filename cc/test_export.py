@@ -51,6 +51,6 @@ class TestExport(TestCase):
 
 if __name__ == "__main__":
     run_tests([
-        TestExport('test_order_export'),
+        # TestExport('test_order_export'),
         TestExport('test_order_detail_export')
     ])
