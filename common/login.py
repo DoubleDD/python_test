@@ -35,6 +35,7 @@ def login(url=URL_AUTH, data=None):
     jsonStr = json.dumps(jsonObj)
     token_file.write(jsonStr)
     token_file.close()
+    r.logJson(jsonStr)
     return jsonStr
 
 
