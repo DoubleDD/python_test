@@ -51,3 +51,17 @@ class CourseInfo:
 class Test:
     url = '/test'
     AUTH = build_url(url+'/auth')
+
+
+class LearningProgress:
+    API_KEY = 'adjkfadsjkfajkldsf'
+    SECRET_KEY = '111111112321312sfasdfdsf'
+
+    url = '/resource/learning/progress'
+    course = build_url(url+'/course')
+    external_activity = build_url(url+'/external-activity')
+    subject = build_url(url+'/subject')
+
+
+class UserInfo:
+    url = build_url('/user/info/simple')
