@@ -7,6 +7,7 @@ from common.base_test import run_tests
 from common.cc import LearningProgress, UserInfo
 from common.HttpUtils import HttpUtils
 from common.md5Utils import md5_sign
+from common.paramTools import originParam,buildParams
 from common.DateUtils import currentTimeMillis
 
 
@@ -41,26 +42,11 @@ class TestLearningProgress(TestCase):
         r.logJson(jsonStr=result.text)
         assert result.status_code == 200, "请求状态码应为 200"
 
-    def buildParams(self, data):
-        sign = md5_sign(data, LearningProgress.SECRET_KEY)
-        data['sign'] = sign
-        dataList = []
-        for key in data:
-            dataList.append("%s=%s" % (key, data[key]))
-        params = '&'.join(dataList).strip()
-        return params
-
     def test_course(self):
         """
         课程数据回传接口
-        @Param(name = "name", required = true)
-        @Param(name = "organizationCode", required = true)
-        @Param(name = "courseId", required = true)
-        @Param(name = "sign", required = true)
-        @Param(name = "finishStatus", type = Integer.class, required = true)
-        @Param(name = "finishTime", type = Long.class)
-        @Param(name = "studyTotalTime", type = Integer.class, required = true)
         """
+        # mock 参数
         data = {
             'apikey': LearningProgress.API_KEY,
             'timestamp': int(currentTimeMillis()*1000),
@@ -71,29 +57,19 @@ class TestLearningProgress(TestCase):
             # 'finishTime': int(currentTimeMillis()*1000),
             'studyTotalTime': 1111111
         }
-        url = LearningProgress.course+'?'+self.buildParams(data)
+
+        # 联调参数
+        debugParams = 'finishStatus=0&finishTime=0&apikey=a5c11b18ede548148f24&accountName=%E8%AF%BE%E7%A8%8B%E6%B5%8B%E8%AF%952019103001&organizationCode=%E8%AF%BE%E7%A8%8B%E6%B5%8B%E8%AF%952019103001&sign=85715FA4D8A792CCF9DF7E35294A03A3&courseId=1&studyTotalTime=5&timestamp=1573537557170& '
+
+        # 处理原始参数
+        data = originParam(debugParams)
+
+        url = LearningProgress.course+'?'+buildParams(data)
         self.result = r.get(url)
 
     def test_activity(self):
         """
         外部活动数据回传接口
-        @Param(name = "sign", required = true)
-        @Param(name = "apikey", required = true)
-        @Param(name = "timestamp", required = true)
-        @Param(name = "accountName", required = true)
-        @Param(name = "organizationCode", required = true)
-        @Param(name = "externalActivityId", required = true)
-        @Param(name = "seconds", type = Integer.class)
-        @Param(name = "obligatoryFinished", type = Integer.class)
-        @Param(name = "obligatoryTotal", type = Integer.class)
-        @Param(name = "obligatoryUnit", type = Integer.class)
-        @Param(name = "electiveFinished", type = Integer.class)
-        @Param(name = "electiveTotal", type = Integer.class)
-        @Param(name = "electiveUnit", type = Integer.class)
-        @Param(name = "examStatus", type = Integer.class)
-        @Param(name = "taskStatus", type = Integer.class)
-        @Param(name = "studyStatus", type = Integer.class, required = true)
-        @Param(name = "finishTime", type = Long.class)
         """
         data = {
             'apikey': LearningProgress.API_KEY+'1',
@@ -114,23 +90,12 @@ class TestLearningProgress(TestCase):
             'finishTime': int(currentTimeMillis()*1000),
         }
 
-        url = LearningProgress.external_activity+'?'+self.buildParams(data)
+        url = LearningProgress.external_activity+'?'+buildParams(data)
         self.result = r.get(url)
 
     def test_subject(self):
         """
         学习专题数据回传接口
-        @Param(name = "sign", required = true)
-        @Param(name = "apikey", required = true)
-        @Param(name = "timestamp", required = true)
-        @Param(name = "accountName", required = true)
-        @Param(name = "organizationCode", required = true)
-        @Param(name = "courseId", required = true)
-        @Param(name = "finishStatus", type = Integer.class, required = true)
-        @Param(name = "beginTime", type = Long.class)
-        @Param(name = "finishTime", type = Long.class)
-        @Param(name = "studyTotalTime", type = Integer.class, required = true)
-        @Param(name = "finishNum", type = Integer.class)
         """
         data = {
             'apikey': LearningProgress.API_KEY,
@@ -145,7 +110,7 @@ class TestLearningProgress(TestCase):
             'studyTotalTime': 1111111
         }
 
-        url = LearningProgress.subject+'?'+self.buildParams(data)
+        url = LearningProgress.subject+'?'+buildParams(data)
         self.result = r.get(url)
 
     def test_userInfo(self):
@@ -157,14 +122,16 @@ class TestLearningProgress(TestCase):
             'timestamp': int(currentTimeMillis()*1000),
             'token': 'e9535fcefaac0344125f24d16f5805c8'
         }
-        url = UserInfo.url+'?'+self.buildParams(data)
+        url = UserInfo.url+'?'+buildParams(data)
         self.result = r.get(url)
+
+
 
 
 if __name__ == '__main__':
     run_tests([
-        # TestLearningProgress('test_course'),
+        TestLearningProgress('test_course'),
         # TestLearningProgress('test_subject'),
         # TestLearningProgress('test_activity'),
-        TestLearningProgress('test_userInfo'),
+        # TestLearningProgress('test_userInfo'),
     ])
