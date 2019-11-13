@@ -15,7 +15,7 @@ def test(debugParams):
 
 if __name__ == "__main__":
     # 联调参数
-    debugParams = 'finishStatus=0&finishTime=0&apikey=a5c11b18ede548148f24&accountName=%E8%AF%BE%E7%A8%8B%E6%B5%8B%E8%AF%952019103001&organizationCode=%E8%AF%BE%E7%A8%8B%E6%B5%8B%E8%AF%952019103001&sign=85715FA4D8A792CCF9DF7E35294A03A3&courseId=1&studyTotalTime=5&timestamp=1573537557170& '
+    debugParams = 'finishStatus=1&finishTime=0&apikey=a5c11b18ede548148f24&accountName=admin&organizationCode=zz_BA503b5123&sign=6AD6095B55E980451DB3DC50A55009AA&courseId=85976dae-1528-4724-ac13-cb7d8fd96627&studyTotalTime=5&timestamp=1573543507376&'
 
     test(debugParams)
 

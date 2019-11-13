@@ -5,8 +5,9 @@ from common.env_config import ServerCC
 from common.login import getToken
 
 server = ServerCC()
-env = ServerCC.LOCAL
-# env = ServerCC.DEV
+# env = ServerCC.LOCAL
+env = ServerCC.DEV
+# env = ServerCC.TEST
 
 
 def get_token():
@@ -54,8 +55,8 @@ class Test:
 
 
 class LearningProgress:
-    API_KEY = 'adjkfadsjkfajkldsf'
-    SECRET_KEY = '111111112321312sfasdfdsf'
+    API_KEY = 'a5c11b18ede548148f24'
+    SECRET_KEY = 'kg82347848148f24789ec56ad'
 
     url = '/resource/learning/progress'
     course = build_url(url+'/course')

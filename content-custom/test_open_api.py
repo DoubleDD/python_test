@@ -17,18 +17,8 @@ r = HttpUtils()
 1572505157.3871675
 '''
 user_info = {
-    "msg": "success",
-    "phoneNumber": None,
-    "rootOrganizationCode": "zz_BAde1af01",
-    "headPortraitPath": None,
-    "sex": 0,
-    "name": "admin",
-    "rootOrganizationName": "资源共享平台",
-    "fullName": "超级管理员",
-    "id": "45626218-a4fc-41eb-8c66-022886421a10",
-    "headPortrait": None,
-    "rootOrganizationId": "ba915d93-274d-4319-8016-035508166f64",
-    "email": None
+    "organizationCode": "zz_BAde1af01",
+    "accountName": "admin"
 }
 
 
@@ -50,19 +40,19 @@ class TestLearningProgress(TestCase):
         data = {
             'apikey': LearningProgress.API_KEY,
             'timestamp': int(currentTimeMillis()*1000),
-            'accountName': user_info['name'],
-            'organizationCode': user_info['rootOrganizationCode'],
-            'courseId': '3c724f7e-7153-4090-abe9-bb8d1d5a4b70',
+            'accountName': user_info['accountName'],
+            'organizationCode': user_info['organizationCode'],
+            'courseId': 'da4d3b54-011d-4f08-88f9-0989fac1a6e4',
             'finishStatus': 1,
-            # 'finishTime': int(currentTimeMillis()*1000),
-            'studyTotalTime': 1111111
+            'finishTime': int(currentTimeMillis()*1000),
+            'studyTotalTime': 1111
         }
 
         # 联调参数
         debugParams = 'finishStatus=0&finishTime=0&apikey=a5c11b18ede548148f24&accountName=%E8%AF%BE%E7%A8%8B%E6%B5%8B%E8%AF%952019103001&organizationCode=%E8%AF%BE%E7%A8%8B%E6%B5%8B%E8%AF%952019103001&sign=85715FA4D8A792CCF9DF7E35294A03A3&courseId=1&studyTotalTime=5&timestamp=1573537557170& '
 
         # 处理原始参数
-        data = originParam(debugParams)
+        # data = originParam(debugParams)
 
         url = LearningProgress.course+'?'+buildParams(data)
         self.result = r.get(url)
@@ -74,8 +64,8 @@ class TestLearningProgress(TestCase):
         data = {
             'apikey': LearningProgress.API_KEY+'1',
             'timestamp': int(currentTimeMillis()*1000),
-            'accountName': user_info['name'],
-            'organizationCode': user_info['rootOrganizationCode'],
+            'accountName': user_info['accountName'],
+            'organizationCode': user_info['organizationCode'],
             'externalActivityId': '3c724f7e-7153-4090-abe9-bb8d1d5a4b70',
             'seconds': 1,
             'obligatoryFinished': 0,
@@ -100,8 +90,8 @@ class TestLearningProgress(TestCase):
         data = {
             'apikey': LearningProgress.API_KEY,
             'timestamp': int(currentTimeMillis()*1000),
-            'accountName': user_info['name'],
-            'organizationCode': user_info['rootOrganizationCode'],
+            'accountName': user_info['accountName'],
+            'organizationCode': user_info['organizationCode'],
             'courseId': '3c724f7e-7153-4090-abe9-bb8d1d5a4b70',
             'finishStatus': 1,
             'finishTime': int(currentTimeMillis()*1000),
