@@ -15,7 +15,7 @@ def test(debugParams):
 
 if __name__ == "__main__":
     # 联调参数
-    debugParams = 'finishStatus=1&finishTime=0&apikey=a5c11b18ede548148f24&accountName=admin&organizationCode=zz_BA503b5123&sign=6AD6095B55E980451DB3DC50A55009AA&courseId=85976dae-1528-4724-ac13-cb7d8fd96627&studyTotalTime=5&timestamp=1573543507376&'
-
+    debugParams = 'finishStatus=1&finishTime=0&apikey=a5c11b18ede548148f24&accountName=admin&organizationCode=zz_BAde1af01&sign=F9B8DF305E3A9E6BF90FC559070F3583&beginTime=1573609703984&courseId=27fcd65a-1dc8-421b-bf06-627ad86a6cdd&studyTotalTime=5&timestamp=1573609703984&'
+# https://rasdev9.zhixueyun.com/api/v1/content/resource/learning/progress/subject?finishStatus=1&finishTime=0&apikey=a5c11b18ede548148f24&accountName=admin&organizationCode=zz_BAde1af01&sign=F9B8DF305E3A9E6BF90FC559070F3583&beginTime=1573609703984&courseId=27fcd65a-1dc8-421b-bf06-627ad86a6cdd&studyTotalTime=5&timestamp=1573609703984&
     test(debugParams)
 
