@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 
-file = {
+mime = {
     ".*": "application/octet-stream",
     ".001": "application/x-001",
     ".301": "application/x-301",

@@ -2,7 +2,7 @@
 from init_env import BASE_DIR
 from common.HttpUtils import HttpUtils
 from common.constains import base64Upload
-from common.FileContentType import mime
+from common.ContentType import mime
 from common.login import getToken
 from test_cases.base_test import runTests
 import unittest
@@ -55,7 +55,7 @@ class TestBase64(unittest.TestCase):
 
 if __name__ == '__main__':
     tests = [
-        TestIndex('test_fastdfs'),
-        TestIndex('test_oss')
+        TestBase64('test_fastdfs'),
+        TestBase64('test_oss')
     ]
     runTests(tests)
