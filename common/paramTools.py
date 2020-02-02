@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 import init_env
-from common.cc import LearningProgress
 from common.md5Utils import md5_sign
 
 def originParam(str):
@@ -17,8 +16,8 @@ def originParam(str):
     return data
 
 
-def buildParams(data):
-    sign = md5_sign(data, LearningProgress.SECRET_KEY)
+def buildParams(data,secret=None):
+    sign = md5_sign(data, secret)
     data['sign'] = sign
     dataList = []
     for key in data:

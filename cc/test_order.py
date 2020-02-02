@@ -33,8 +33,8 @@ class TestOrder(TestCase):
     def test_detail(self):
         """订单详情
         """
-        order_id = '1bae2027-054f-4364-8015-ab8028c1c748'
-        url = Order.DETAIL + f"{order_id}?page=1&pageSize=10"
+        order_id = '097b769d-f22e-4ff7-88e1-32f55d3f643d'
+        url = Order.DETAIL + f"{order_id}?page=1&pageSize=10&type=4"
         self.result = self.r.get(url)
 
 

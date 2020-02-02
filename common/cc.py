@@ -5,9 +5,7 @@ from common.env_config import ServerCC
 from common.login import getToken
 
 server = ServerCC()
-env = ServerCC.LOCAL
-# env = ServerCC.DEV
-# env = ServerCC.TEST
+env = ServerCC.RASDEV
 
 
 def get_token():
@@ -32,6 +30,11 @@ class CompanyConfig:
     CALLBACK_CONFIG = build_url(url+'/login-config')
 
 
+class ResourcePark:
+    url = '/resources-park'
+    CONFIG_JSON = build_url(url+'/config-json')
+
+
 class CompanyResource:
     url = '/company-resources'
     LIST = build_url(url + '/list')
@@ -41,7 +44,7 @@ class CompanyResource:
 class Order:
     url = '/order'
     LIST = build_url(url+'/list')
-    DETAIL = build_url(url+'/detail/')
+    DETAIL = build_url(url+'/detail/multipart/')
 
 
 class CourseInfo:
@@ -54,8 +57,18 @@ class Test:
     AUTH = build_url(url+'/auth')
 
 
+class ConsumerLearningProgress:
+    API_KEY = 'e61121d3d39f649c1f847e470abf2e95'
+    SECRET_KEY = '9b16400cd267e4c685df447178570ed5'
+
+    url = '/resource/learning/progress'
+    course = build_url(url+'/course')
+    external_activity = build_url(url+'/external-activity')
+    subject = build_url(url+'/subject')
+
+
 class LearningProgress:
-    API_KEY = 'a5c11b18ede548148f24'
+    API_KEY = 'a5c11b18ede548148f241'
     SECRET_KEY = 'kg82347848148f24789ec56ad'
 
     url = '/resource/learning/progress'

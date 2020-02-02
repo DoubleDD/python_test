@@ -18,7 +18,7 @@ r = HttpUtils()
 user_info = {
     "organizationCode": "zz_BAde1af01",#dev
     # "organizationCode": "zz_BA503b5123",#test
-    "accountName": "admin"
+    "accountName": "cmccadmin"
 }
 
 isDebug=0
@@ -62,23 +62,14 @@ class TestLearningProgress(TestCase):
         """
         外部活动数据回传接口
         """
+        # mock 参数
         data = {
             'apikey': LearningProgress.API_KEY,
             'timestamp': int(currentTimeMillis()*1000),
             'accountName': user_info['accountName'],
             'organizationCode': user_info['organizationCode'],
-            'externalActivityId': '89fea018-09fd-429e-ad0a-06d59bb4fab0',
-            'seconds': 1,
-            'obligatoryFinished': 0,
-            'obligatoryTotal': 0,
-            'obligatoryUnit': 0,
-            'electiveFinished': 0,
-            'electiveTotal': 0,
-            'electiveUnit': 0,
-            'examStatus': 0,
-            'taskStatus': 0,
-            'studyStatus': 0,
-            'finishTime': int(currentTimeMillis()*1000),
+            'externalActivityId': 'd595bda0-0e83-42ce-837e-4e0629f69b95',
+            'studyStatus': 2
         }
 
         if isDebug:
@@ -94,12 +85,13 @@ class TestLearningProgress(TestCase):
         """
         学习专题数据回传接口
         """
+        # mock 参数
         data = {
             'apikey': LearningProgress.API_KEY,
             'timestamp': int(currentTimeMillis()*1000),
             'accountName': user_info['accountName'],
             'organizationCode': user_info['organizationCode'],
-            'courseId': '3c724f7e-7153-4090-abe9-bb8d1d5a4b70',
+            'courseId': 'c5526fe0-edc6-4bd6-8c25-1e840b82ab80',
             'finishStatus': 1,
             'finishTime': int(currentTimeMillis()*1000),
             'beginTime': int(currentTimeMillis()*1000),
@@ -121,10 +113,11 @@ class TestLearningProgress(TestCase):
         """
         获取用户信息
         """
+        # mock 参数
         data = {
             'apikey': LearningProgress.API_KEY,
             'timestamp': int(currentTimeMillis()*1000),
-            'token': '9176562f0b2e98eb6051197a03b14bf8'
+            'token': '1cafa79c0456c2b645dba0c340ad1ac8'
         }
         url = UserInfo.url+'?'+buildParams(data)
         self.result = r.get(url)
@@ -134,8 +127,8 @@ class TestLearningProgress(TestCase):
 
 if __name__ == '__main__':
     run_tests([
-        TestLearningProgress('test_course'),
-        # TestLearningProgress('test_subject'),
-        # TestLearningProgress('test_activity'),
         # TestLearningProgress('test_userInfo'),
+        # TestLearningProgress('test_course'),
+        # TestLearningProgress('test_subject'),
+        TestLearningProgress('test_activity'),
     ])
