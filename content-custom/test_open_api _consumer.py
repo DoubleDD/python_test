@@ -95,7 +95,7 @@ class TestConsumerLearningProgress(TestCase):
             'organizationCode': user_info['organizationCode'],
             'courseId': 'c5526fe0-edc6-4bd6-8c25-1e840b82ab80',
             'finishStatus': 1,
-            'finishTime': int(currentTimeMillis()*1000),
+            'finishTime': '',
             'beginTime': int(currentTimeMillis()*1000),
             'finishNum': 0,
             'studyTotalTime': 1111111
@@ -103,7 +103,7 @@ class TestConsumerLearningProgress(TestCase):
 
         if isDebug:
             # 联调参数
-            debugParams = 'finishStatus=1&finishTime=1580631436742&apikey=e61121d3d39f649c1f847e470abf2e95&name=admin&organizationCode=cmcc&sign=A87096F9C698CB141F2AC81B7FD3B3D0&beginTime=1580631436742&courseId=acc681d3-3c74-44bc-80f4-86dfefb10dbf&finishNum=0&studyTotalTime=1111111&timestamp=1580649261100'
+            debugParams = 'finishStatus=1&finishTime=&apikey=e61121d3d39f649c1f847e470abf2e95&name=admin&organizationCode=cmcc&sign=A87096F9C698CB141F2AC81B7FD3B3D0&beginTime=1580631436742&courseId=acc681d3-3c74-44bc-80f4-86dfefb10dbf&finishNum=0&studyTotalTime=1111111&timestamp=1580649261100'
 
             # 处理原始参数
             data = originParam(debugParams)
@@ -114,8 +114,7 @@ class TestConsumerLearningProgress(TestCase):
 
 if __name__ == '__main__':
     run_tests([
-        # TestConsumerLearningProgress('test_userInfo'),
         # TestConsumerLearningProgress('test_course'),
-        # TestConsumerLearningProgress('test_subject'),
-        TestConsumerLearningProgress('test_activity'),
+        TestConsumerLearningProgress('test_subject'),
+        # TestConsumerLearningProgress('test_activity'),
     ])

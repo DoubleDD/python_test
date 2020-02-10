@@ -16,12 +16,13 @@ r = HttpUtils()
 资源平台admin账号信息
 '''
 user_info = {
-    "organizationCode": "zz_BAde1af01",#dev
+    "organizationCode": "zz_BAde1af01",  # dev
     # "organizationCode": "zz_BA503b5123",#test
     "accountName": "cmccadmin"
 }
 
-isDebug=0
+isDebug = 0
+
 
 class TestLearningProgress(TestCase):
     def setUp(self) -> None:
@@ -117,18 +118,20 @@ class TestLearningProgress(TestCase):
         data = {
             'apikey': LearningProgress.API_KEY,
             'timestamp': int(currentTimeMillis()*1000),
-            'token': '1cafa79c0456c2b645dba0c340ad1ac8'
+            'token': '18ff9975654b1c62155e58334a058793'
         }
-        url = UserInfo.url+'?'+buildParams(data)
+        url = 'http://localhost:8888/api/v1/content/user/info/simple?' + \
+            buildParams(data, LearningProgress.SECRET_KEY)
+        # url = UserInfo.url+'?'+buildParams(data,LearningProgress.SECRET_KEY)
+        #     API_KEY = '8bf8e66924e3f63453842084995354d6'
+        # SECRET_KEY = 'd7247877a06de4b0ed2d9825d6ed134a'
         self.result = r.get(url)
-
-
 
 
 if __name__ == '__main__':
     run_tests([
-        # TestLearningProgress('test_userInfo'),
+        TestLearningProgress('test_userInfo'),
         # TestLearningProgress('test_course'),
         # TestLearningProgress('test_subject'),
-        TestLearningProgress('test_activity'),
+        # TestLearningProgress('test_activity'),
     ])
