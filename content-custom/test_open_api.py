@@ -39,24 +39,18 @@ class TestLearningProgress(TestCase):
         课程数据回传接口
         """
         # mock 参数
-        data = {
-            'apikey': LearningProgress.API_KEY,
-            'timestamp': int(currentTimeMillis()*1000),
-            'accountName': user_info['accountName'],
-            'organizationCode': user_info['organizationCode'],
-            'courseId': 'da4d3b54-011d-4f08-88f9-0989fac1a6e4',
-            'finishStatus': 1,
-            'finishTime': int(currentTimeMillis()*1000),
-            'studyTotalTime': 1111
-        }
+        data = {"finishStatus": 2, "finishTime": 1583640517384, "apikey": "97dab5d238c75a1d3dad89faa9df03e4", "accountName": "hgydx13547198687wxj#", "organizationCode": "zz_BA43ef5ab5", "sign": "B545D08FCE451B0BD4D388D6672ED8EA",
+                "beginTime": 1583638573887, "courseId": "26DB841A84140C58A8A9A5DAA8A4A1FB03B75F3A13594D8832E7A1240183096B099D10AA1B1BB22C", "studyTotalTime": 1665, "timestamp": "1583640877461"}
 
         if isDebug:
             # 联调参数
             debugParams = 'finishStatus=0&finishTime=0&apikey=a5c11b18ede548148f24&accountName=%E8%AF%BE%E7%A8%8B%E6%B5%8B%E8%AF%952019103001&organizationCode=%E8%AF%BE%E7%A8%8B%E6%B5%8B%E8%AF%952019103001&sign=85715FA4D8A792CCF9DF7E35294A03A3&courseId=1&studyTotalTime=5&timestamp=1573537557170& '
             # 处理原始参数
             data = originParam(debugParams)
-
-        url = LearningProgress.course+'?'+buildParams(data)
+        # serverUrl = LearningProgress.course;
+        # serverUrl = 'https://rastest9.zhixueyun.com/api/v1/content/resource/learning/progress/course'
+        serverUrl = 'http://localhost:8888/api/v1/content/resource/learning/progress/course'
+        url = serverUrl + '?' + buildParams(data,'123')
         self.result = r.get(url)
 
     def test_activity(self):
@@ -155,8 +149,8 @@ class TestLearningProgress(TestCase):
 if __name__ == '__main__':
     run_tests([
         # TestLearningProgress('test_userInfo'),
-        TestLearningProgress('test_course_batch'),
-        # TestLearningProgress('test_course'),
+        # TestLearningProgress('test_course_batch'),
+        TestLearningProgress('test_course'),
         # TestLearningProgress('test_subject'),
         # TestLearningProgress('test_activity'),
     ])
