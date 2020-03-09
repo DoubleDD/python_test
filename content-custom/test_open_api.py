@@ -7,7 +7,7 @@ from common.base_test import run_tests
 from common.cc import LearningProgress, UserInfo
 from common.HttpUtils import HttpUtils
 from common.md5Utils import md5_sign
-from common.paramTools import originParam, buildParams
+from common.paramTools import originParam, buildParams, buildPostData
 from common.DateUtils import currentTimeMillis
 
 
@@ -118,19 +118,44 @@ class TestLearningProgress(TestCase):
         data = {
             'apikey': LearningProgress.API_KEY,
             'timestamp': int(currentTimeMillis()*1000),
-            'token': '18ff9975654b1c62155e58334a058793'
+            'token': 'ea992d3ec553203e25032b5a5dd72510'
         }
-        url = 'http://localhost:8888/api/v1/content/user/info/simple?' + \
+        url = 'https://zxhcs.zhixueyun.com/api/v1/content/user/info/simple?' + \
             buildParams(data, LearningProgress.SECRET_KEY)
         # url = UserInfo.url+'?'+buildParams(data,LearningProgress.SECRET_KEY)
         #     API_KEY = '8bf8e66924e3f63453842084995354d6'
         # SECRET_KEY = 'd7247877a06de4b0ed2d9825d6ed134a'
         self.result = r.get(url)
 
+    def test_course_batch(self):
+        """
+        课程数据回传接口
+        """
+        # mock 参数
+        data = {
+            "apikey": "3466ea0c6911ebec017c89e18c21892e",
+            "timestamp": "1582544727196", "organizationCode": "zz_BAde1af01",
+            "progress": "[{\"finishStatus\":\"1\",\"accountName\":\"cmccadmin\",\"organizationCode\":\"zz_BAde1af01\",\"beginTime\":\"1580203838730\",\"courseId\":\"000ebb2e-69c8-497b-8ab1-c54138322e05\",\"studyTotalTime\":\"600\"},{\"finishStatus\":\"1\",\"accountName\":\"cmccadmin\",\"organizationCode\":\"zz_BAde1af01\",\"beginTime\":\"1580203838730\",\"courseId\":\"000ebb2e-69c8-497b-8ab1-c54138322e05\",\"studyTotalTime\":\"600\"},{\"finishStatus\":\"1\",\"accountName\":\"cmccadmin\",\"organizationCode\":\"zz_BAde1af01\",\"beginTime\":\"1580203838730\",\"courseId\":\"000ebb2e-69c8-497b-8ab1-c54138322e05\",\"studyTotalTime\":\"600\"}]"
+        }
+
+        if isDebug:
+            # 联调参数
+            debugParams = 'finishStatus=0&finishTime=0&apikey=a5c11b18ede548148f24&accountName=%E8%AF%BE%E7%A8%8B%E6%B5%8B%E8%AF%952019103001&organizationCode=%E8%AF%BE%E7%A8%8B%E6%B5%8B%E8%AF%952019103001&sign=85715FA4D8A792CCF9DF7E35294A03A3&courseId=1&studyTotalTime=5&timestamp=1573537557170& '
+            # 处理原始参数
+            data = originParam(debugParams)
+
+        domain = 'http://localhost:8888'
+        path = '/api/v1/content/resource/learning/progress/course/batch'
+
+        data = buildPostData(data, '903a1b14ebbec7a24ce3ce762dca7008')
+
+        self.result = r.post(url=domain+path, data=data)
+
 
 if __name__ == '__main__':
     run_tests([
-        TestLearningProgress('test_userInfo'),
+        # TestLearningProgress('test_userInfo'),
+        TestLearningProgress('test_course_batch'),
         # TestLearningProgress('test_course'),
         # TestLearningProgress('test_subject'),
         # TestLearningProgress('test_activity'),

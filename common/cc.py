@@ -68,8 +68,8 @@ class ConsumerLearningProgress:
 
 
 class LearningProgress:
-    API_KEY = 'a5c11b18ede548148f241'
-    SECRET_KEY = 'kg82347848148f24789ec56ad'
+    API_KEY = '4ff60d0c4dfa56476a09d470ad50c715'
+    SECRET_KEY = 'f9b2f73b44333a748103f36dac1a7648'
 
     url = '/resource/learning/progress'
     course = build_url(url+'/course')

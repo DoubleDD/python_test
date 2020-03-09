@@ -25,3 +25,7 @@ def buildParams(data,secret=None):
     params = '&'.join(dataList).strip()
     return params
 
+def buildPostData(data,secret=None):
+    sign = md5_sign(data, secret)
+    data['sign'] = sign
+    return data
