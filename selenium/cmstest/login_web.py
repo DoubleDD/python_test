@@ -19,21 +19,23 @@ class LoginWeb:
         except:
             print("加载页面太慢，停止加载，继续下一步操作")
             driver.execute_script("window.stop()")
-        driver.maximize_window()
+        # driver.maximize_window()
         print('打开url')
         sleep(2)
+        self.loginAction(driver,self.username, self.password)
 
+    def loginAction(self, driver=None, username=None, password=None):
         longin_link = driver.find_element_by_link_text("登录")
         print('获取登录按钮')
         longin_link.click()
         print('点击登录按钮')
         sleep(2)
 
-        username = driver.find_element_by_name('username')
-        password = driver.find_element_by_name('pword')
-        username.send_keys(self.username + Keys.ESCAPE)
+        usernameEle = driver.find_element_by_name('username')
+        passwordEle = driver.find_element_by_name('pword')
+        usernameEle.send_keys(username + Keys.ESCAPE)
         print('设置用户名')
-        password.send_keys(self.password + Keys.RETURN)
+        passwordEle.send_keys(password + Keys.RETURN)
         print('设置密码')
         sleep(2)
 
