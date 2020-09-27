@@ -20,9 +20,10 @@ class HttpUtils:
         print("\n请求url：\n"+url)
         print("\n请求数据：")
         self.logJson(jsonObj=data)
-        headers = {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        }
+        if hasattr(headers, 'Content-Type'):
+            headers = {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
         response = r.post(url=url, data=data, files=files, headers=headers)
         return response
 
