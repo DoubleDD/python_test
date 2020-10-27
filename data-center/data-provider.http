@@ -11,3 +11,6 @@ tableName=adm_zhslyzt_lake&whereCond=lk_name like concat('%','湖','%') &queryFi
 
 ###
 get http://localhost:19003/api/station/fetchwater/list?watershed=&regionCode=&keyword=
+
+###
+get http://localhost:19003/api/station/rainfall/list?watershed=&regionCode=&keyword=
