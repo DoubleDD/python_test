@@ -1,0 +1,359 @@
+{
+    "code": 200,
+    "message": "success",
+    "data": {
+        "id": 2595,
+        "nameCn": "地下水水源地基本信息表",
+        "nameEn": "dwd_fzr_fss_wr_gws_b",
+        "status": 2,
+        "responsibleOrganizationId": "dbc9c06fe0ab69ab8e91ae62c83b990c",
+        "responsibleOrganizationName": "数据中台",
+        "responsibleId": "63b452a08adcb77365c4b2c726756484",
+        "responsibleName": "数据中台管理员",
+        "dataImportApprovalType": 0,
+        "sharingType": 0,
+        "sharingCondition": "1",
+        "openToSociety": true,
+        "openCondition": null,
+        "interactiveQuery": false,
+        "description": "1",
+        "count": 0,
+        "publishedTime": "2020-11-11 14:52:33",
+        "createTime": "2020-11-11 11:28:23",
+        "updateTime": "2020-11-11 14:52:33",
+        "resourceColumns": [{
+            "id": 44939,
+            "resourceId": 2595,
+            "columnName": "gws_cd",
+            "columnType": "string",
+            "columnDescription": "地下水水源地代码",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44941,
+            "resourceId": 2595,
+            "columnName": "gws_nm",
+            "columnType": "string",
+            "columnDescription": "地下水水源地名称",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44943,
+            "resourceId": 2595,
+            "columnName": "gws_a",
+            "columnType": "double",
+            "columnDescription": "地下水水源地面积",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44945,
+            "resourceId": 2595,
+            "columnName": "gwhs_long",
+            "columnType": "double",
+            "columnDescription": "地下水水源地经度",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44947,
+            "resourceId": 2595,
+            "columnName": "gwhs_lat",
+            "columnType": "double",
+            "columnDescription": "地下水水源地纬度",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44949,
+            "resourceId": 2595,
+            "columnName": "gwhs_loc",
+            "columnType": "string",
+            "columnDescription": "地下水水源地所在位置",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44951,
+            "resourceId": 2595,
+            "columnName": "grwa_type",
+            "columnType": "string",
+            "columnDescription": "所取用地下水类型",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44953,
+            "resourceId": 2595,
+            "columnName": "run_year",
+            "columnType": "string",
+            "columnDescription": "投入运行年",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44955,
+            "resourceId": 2595,
+            "columnName": "waqu_goal",
+            "columnType": "string",
+            "columnDescription": "水质目标",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44957,
+            "resourceId": 2595,
+            "columnName": "waso_type",
+            "columnType": "string",
+            "columnDescription": "水源类型",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44959,
+            "resourceId": 2595,
+            "columnName": "wain_use",
+            "columnType": "string",
+            "columnDescription": "主要取水用途",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44961,
+            "resourceId": 2595,
+            "columnName": "well_nums",
+            "columnType": "bigint",
+            "columnDescription": "规模以上机电井数量",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44963,
+            "resourceId": 2595,
+            "columnName": "rang_desc",
+            "columnType": "string",
+            "columnDescription": "范围描述",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44965,
+            "resourceId": 2595,
+            "columnName": "cons_cond",
+            "columnType": "string",
+            "columnDescription": "建设状况",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44967,
+            "resourceId": 2595,
+            "columnName": "put_prod_tm",
+            "columnType": "timestamp",
+            "columnDescription": "投产时间",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44969,
+            "resourceId": 2595,
+            "columnName": "run_cond",
+            "columnType": "string",
+            "columnDescription": "运行状况",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44971,
+            "resourceId": 2595,
+            "columnName": "avg_exp_yd",
+            "columnType": "double",
+            "columnDescription": "多年平均年可开采量",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44973,
+            "resourceId": 2595,
+            "columnName": "ws_obj",
+            "columnType": "string",
+            "columnDescription": "供水对象",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44975,
+            "resourceId": 2595,
+            "columnName": "ws_obj_tp",
+            "columnType": "string",
+            "columnDescription": "供水对象类型",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44977,
+            "resourceId": 2595,
+            "columnName": "wasu_town_name",
+            "columnType": "string",
+            "columnDescription": "主要供水城镇名称",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44979,
+            "resourceId": 2595,
+            "columnName": "des_int",
+            "columnType": "double",
+            "columnDescription": "设计年取水量",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44981,
+            "resourceId": 2595,
+            "columnName": "perm_int",
+            "columnType": "double",
+            "columnDescription": "年许可取水量",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44983,
+            "resourceId": 2595,
+            "columnName": "whs_man_cd",
+            "columnType": "string",
+            "columnDescription": "水源地管理单位代码",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44985,
+            "resourceId": 2595,
+            "columnName": "whs_appr_cd",
+            "columnType": "string",
+            "columnDescription": "水源地审批单位代码",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44987,
+            "resourceId": 2595,
+            "columnName": "mon_g",
+            "columnType": "string",
+            "columnDescription": "监控级别",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44989,
+            "resourceId": 2595,
+            "columnName": "is_emg",
+            "columnType": "string",
+            "columnDescription": "是否为应急水源地",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44991,
+            "resourceId": 2595,
+            "columnName": "ts",
+            "columnType": "timestamp",
+            "columnDescription": "时间戳",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44993,
+            "resourceId": 2595,
+            "columnName": "expr_date",
+            "columnType": "timestamp",
+            "columnDescription": "记录失效时间",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44995,
+            "resourceId": 2595,
+            "columnName": "nt",
+            "columnType": "string",
+            "columnDescription": "备注",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44997,
+            "resourceId": 2595,
+            "columnName": "src_dep",
+            "columnType": "string",
+            "columnDescription": "来源部门",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 44999,
+            "resourceId": 2595,
+            "columnName": "src_sys",
+            "columnType": "string",
+            "columnDescription": "来源系统",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 45001,
+            "resourceId": 2595,
+            "columnName": "event_time",
+            "columnType": "string",
+            "columnDescription": "数据插入时间",
+            "partitionColumn": false,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }, {
+            "id": 45003,
+            "resourceId": 2595,
+            "columnName": "pdate",
+            "columnType": "string",
+            "columnDescription": "日分区字段",
+            "partitionColumn": true,
+            "secret": false,
+            "createTime": "2020-11-11 11:28:23",
+            "updateTime": "2020-11-11 11:28:23"
+        }],
+        "extendProperties": [],
+        "tagIds": [],
+        "tagNames": []
+    }
+}
