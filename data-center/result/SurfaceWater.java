@@ -1,8 +1,8 @@
 package com.yunli.ecology.multiplex.adaptersite.entity.wading.project;
 
 /**
- * dwd_fzr_fss_wr_sws_b
- * 地表水水源地基本信息表
+ * adm_zhslyzt_dbs
+ * 一张图地表水
  */
 @lombok.Data
 public class SurfaceWater {
@@ -23,12 +23,12 @@ public class SurfaceWater {
     private String swsTp;
 
     /**
-     * 地表水水源地经度
+     * 经度
      */
     private Double swhsLong;
 
     /**
-     * 地表水水源地纬度
+     * 纬度
      */
     private Double swhsLat;
 
@@ -38,177 +38,112 @@ public class SurfaceWater {
     private String swhsLoc;
 
     /**
+     * 省级行政区划编码
+     */
+    private String provregioncode;
+
+    /**
+     * 省级行政区划名称
+     */
+    private String provregionname;
+
+    /**
+     * 市级行政区划编码
+     */
+    private String cityregioncode;
+
+    /**
+     * 市级行政区划名称
+     */
+    private String cityregionname;
+
+    /**
+     * 区县行政区划编码
+     */
+    private String regioncode;
+
+    /**
+     * 区县行政区划名称
+     */
+    private String regionname;
+
+    /**
      * 取水水源类型
      */
     private String wainWasoType;
 
     /**
-     * 水面面积
-     */
-    private Double watA;
-
-    /**
      * 取水口数量
      */
-    private Integer wainNum;
+    private String qskNumber;
 
     /**
-     * 主要取水用途
-     */
-    private String wainUse;
-
-    /**
-     * 水质目标
-     */
-    private String wqGoal;
-
-    /**
-     * 建设状况
-     */
-    private String consCond;
-
-    /**
-     * 投产时间
-     */
-    private java.util.Date putProdTm;
-
-    /**
-     * 运行状况
-     */
-    private String runCond;
-
-    /**
-     * 水源供水持续状况
-     */
-    private String wsCond;
-
-    /**
-     * 供水对象
-     */
-    private String wsObj;
-
-    /**
-     * 供水对象类型
-     */
-    private String wsObjTp;
-
-    /**
-     * 设计年供水人口
-     */
-    private Double dywsPp;
-
-    /**
-     * 设计年供水量
-     */
-    private Double dywsW;
-
-    /**
-     * 设计日供水量
-     */
-    private Double ddwsW;
-
-    /**
-     * 主要供水城镇名称
-     */
-    private String wasuTownName;
-
-    /**
-     * 投入运行年
-     */
-    private String runYear;
-
-    /**
-     * 水源地管理单位代码
-     */
-    private String whsManCd;
-
-    /**
-     * 水源地审批单位代码
-     */
-    private String whsApprCd;
-
-    /**
-     * 应急管理单位代码
-     */
-    private String emCd;
-
-    /**
-     * 监控级别
-     */
-    private String monG;
-
-    /**
-     * 一级保护区面积
-     */
-    private Double firProA;
-
-    /**
-     * 一级保护区水域面积（平方公里）
+     * 一级保护区水域面积
      */
     private Double prooLandArea;
 
     /**
-     * 一级保护区陆域面积（平方公里）
+     * 一级保护区陆域面积
      */
     private Double prooWaterArea;
 
     /**
-     * 二级保护区面积
+     * 主要供水城镇名称（工程特性）
      */
-    private Double secProA;
+    private String wasuTownName;
 
     /**
-     * 二级保护区水域面积（平方公里）
+     * 主要取水用途（工程特性）
      */
-    private Double protLandA;
+    private String wainUse;
 
     /**
-     * 二级保护区陆域面积（平方公里）
+     * 取水许可证代码（管理情况）
      */
-    private Double protWaterArea;
+    private String watLicCode;
 
     /**
-     * 准保护区面积
+     * 管理单位代码（管理情况）
      */
-    private Double norProA;
+    private String whsManCd;
 
     /**
-     * 是否为应急水源地
+     * 管理单位名称（管理情况）
      */
-    private String isEmg;
+    private String whsManName;
 
     /**
-     * 时间戳
+     * 关联的河流code（关联情况）
      */
-    private java.util.Date ts;
+    private String riverLakeCode;
 
     /**
-     * 备注
+     * 关联的河流名称（关联情况）
      */
-    private String nt;
+    private String riverLakeName;
 
     /**
-     * 记录失效时间
+     * 关联的河流长度（关联情况）
      */
-    private java.util.Date exprDate;
+    private Double riverLakeLength;
 
     /**
-     * 来源部门
+     * 流域面积（关联情况）
      */
-    private String srcDep;
+    private Double drainagearea;
 
     /**
-     * 来源系统
+     * 多年平均降水量（关联情况）
      */
-    private String srcSys;
+    private Double averageprecipitation;
 
     /**
-     * 数据插入时间
+     * 多年平均年径流深（关联情况）
      */
-    private String eventTime;
+    private Double averageannualrunoffdepth;
 
     /**
-     * 日分区字段
+     * 河流平均比降（关联情况）
      */
-    private String pdate;
+    private Double averageriverdrop;
 }
