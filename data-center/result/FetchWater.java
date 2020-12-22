@@ -1,8 +1,8 @@
 package com.yunli.ecology.multiplex.adaptersite.entity.wading.project;
 
 /**
- * dwd_fzr_fss_wr_int_b
- * 地表水取水口基本信息表
+ * adm_zhslyzt_qsk
+ * 一张图取水口
  */
 @lombok.Data
 public class FetchWater {
@@ -33,9 +33,44 @@ public class FetchWater {
     private String wainLoc;
 
     /**
-     * 取水水源类型
+     * 省级行政区划编码
+     */
+    private String provRegionCode;
+
+    /**
+     * 省级行政区划名称
+     */
+    private String provRegionName;
+
+    /**
+     * 市级行政区划编码
+     */
+    private String cityRegionCode;
+
+    /**
+     * 市级行政区划名称
+     */
+    private String cityRegionName;
+
+    /**
+     * 区县行政区划编码
+     */
+    private String regionCode;
+
+    /**
+     * 区县行政区划名称
+     */
+    private String regionName;
+
+    /**
+     * 水源类型
      */
     private String wainWasoType;
+
+    /**
+     * 水源地名称
+     */
+    private String wainWasoName;
 
     /**
      * 取水流量
@@ -48,16 +83,6 @@ public class FetchWater {
     private String scalType;
 
     /**
-     * 取水许可证代码
-     */
-    private String watLicCode;
-
-    /**
-     * 主要取水用途
-     */
-    private String wainUse;
-
-    /**
      * 取水方式
      */
     private String intTp;
@@ -68,82 +93,87 @@ public class FetchWater {
     private java.util.Date fromIntDt;
 
     /**
-     * 许可最大流量
-     */
-    private Double maxPermQ;
-
-    /**
      * 设计流量
      */
     private Double desQ;
 
     /**
-     * 许可总取水量
-     */
-    private Double permWw;
-
-    /**
-     * 运行状况
+     * 运行状况（工程特性）
      */
     private String runCond;
 
     /**
-     * 管理单位代码
+     * 主要取水用途（工程特性）
+     */
+    private String wainUse;
+
+    /**
+     * 许可总取水量（工程特性）
+     */
+    private Double permWw;
+
+    /**
+     * 取水量重复系数（工程特性）
+     */
+    private Double coefficient;
+
+    /**
+     * 取水许可证代码（管理情况）
+     */
+    private String watLicCode;
+
+    /**
+     * 管理单位代码（管理情况）
      */
     private String engManCd;
 
     /**
-     * 供水范围
+     * 管理单位名称（管理情况）
      */
-    private String wsReg;
+    private String engManName;
 
     /**
-     * 水量计算方法
+     * 取水许可证审批单位（管理情况）
      */
-    private String intCalWay;
+    private String approvalUnit;
 
     /**
-     * 是否为灌区渠首
+     * 水许可监督管理机关单位（管理情况）
      */
-    private String isIrrhd;
+    private String managementAgency;
 
     /**
-     * 口门控制面积
+     * 关联的河流长度（关联情况）
      */
-    private Double conIrrA;
+    private Double riverLakeLength;
 
     /**
-     * 时间戳
+     * 流域面积（关联情况）
      */
-    private java.util.Date ts;
+    private Double drainageArea;
 
     /**
-     * 备注
+     * 多年平均降水量（关联情况）
      */
-    private String nt;
+    private Double averagePrecipitation;
 
     /**
-     * 记录失效时间
+     * 多年平均年径流深（关联情况）
      */
-    private java.util.Date exprDate;
+    private Double averageAnnualRunoffDepth;
 
     /**
-     * 来源部门
+     * 河流平均比降（关联情况）
      */
-    private String srcDep;
+    private Double averageRiverDrop;
 
     /**
-     * 来源系统
+     * 河流code
      */
-    private String srcSys;
+    private String rvCode;
 
     /**
-     * 数据插入时间
+     * 河流名称
      */
-    private String eventTime;
-
-    /**
-     * 日分区字段
-     */
-    private String pdate;
+    private String rvName;
 }

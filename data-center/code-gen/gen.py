@@ -12,7 +12,7 @@ class CodeGenerator:
 
     def createFile(self, package, className, jsonFileName):
         text = self.handle(package, className, jsonFileName)
-        fileName = self.path+ '/'+className+'.java'
+        fileName = self.path + '/'+className+'.java'
         file = open(fileName, 'w+', newline='', encoding='UTF-8')
         for t in text:
             # 写文件
@@ -22,13 +22,13 @@ class CodeGenerator:
         file.close()
 
         mappingStr = json.dumps(self.fieldMapping, sort_keys=True,
-                         indent=4, separators=(',', ': '))
+                                indent=4, separators=(',', ': '))
         print(mappingStr)
-        fieldMappingFile = self.path+ '/'+className+'.json'
-        mappingFile = open(fieldMappingFile, 'w+', newline='', encoding='UTF-8')
+        fieldMappingFile = self.path + '/'+className+'.json'
+        mappingFile = open(fieldMappingFile, 'w+',
+                           newline='', encoding='UTF-8')
         mappingFile.write(mappingStr)
         mappingFile.close()
-
 
     def handle(self, package, className, jsonFileName):
         jsonObj = self.getJson(jsonFileName)
