@@ -7,20 +7,18 @@ from common.HttpUtils import HttpUtils
 
 
 class UserInfo:
-    def __init__(self):
-        self.id = ''
-        self.username = ''
-        self.id_card = ''
-        self.mobile = ''
-        self.email = ''
+    id = ''
+    username = ''
+    id_card = ''
+    mobile = ''
+    email = ''
 
-    def parse(self, row):
+    def __init__(self, row):
         self.id = row[0]
         self.username = row[1]
         self.id_card = row[2]
         self.mobile = row[3]
         self.email = row[4]
-        return self
 
 
 r = HttpUtils()
@@ -81,11 +79,12 @@ def sync():
     result = db.execute(sql)[0]
 
     for row in result:
-        user = UserInfo().parse(row)
+        user = UserInfo(row)
         result = Mimayun().userRegister(user)
         print(urllib.parse.unquote(result.text))
 
     db.close()
+
 
 if __name__ == "__main__":
     sync()
