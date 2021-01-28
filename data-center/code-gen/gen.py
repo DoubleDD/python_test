@@ -119,9 +119,9 @@ if __name__ == "__main__":
     # 包名
     package = 'com.yunli.ecology.multiplex.adaptersite.entity.wading.project'
     objs = [
-        (package, 'FetchWater', 'dwd_fzr_fss_wr_int_b'),
-        (package, 'GroundWater', 'dwd_fzr_fss_wr_gws_b'),
-        (package, 'SurfaceWater', 'dwd_fzr_fss_wr_sws_b'),
+        # (package, 'FetchWater', 'dwd_fzr_fss_wr_int_b'),
+        (package, 'GroundWater', 'adm_zhslyzt_dxs'),
+        # (package, 'SurfaceWater', 'dwd_fzr_fss_wr_sws_b'),
     ]
     for obj in objs:
         CodeGenerator().createFile(obj[0], obj[1], obj[2])

@@ -1,8 +1,8 @@
 package com.yunli.ecology.multiplex.adaptersite.entity.wading.project;
 
 /**
- * dwd_fzr_fss_wr_gws_b
- * 地下水水源地基本信息表
+ * adm_zhslyzt_dxs
+ * 一张图地下水
  */
 @lombok.Data
 public class GroundWater {
@@ -18,17 +18,17 @@ public class GroundWater {
     private String gwsNm;
 
     /**
-     * 地下水水源地面积
+     * 所取用地下水类型
      */
-    private Double gwsA;
+    private String grwaType;
 
     /**
-     * 地下水水源地经度
+     * 经度
      */
     private Double gwhsLong;
 
     /**
-     * 地下水水源地纬度
+     * 纬度
      */
     private Double gwhsLat;
 
@@ -38,17 +38,42 @@ public class GroundWater {
     private String gwhsLoc;
 
     /**
-     * 所取用地下水类型
+     * 省级行政区划编码
      */
-    private String grwaType;
+    private String provregioncode;
 
     /**
-     * 投入运行年
+     * 省级行政区划名称
      */
-    private String runYear;
+    private String provregionname;
 
     /**
-     * 水质目标
+     * 市级行政区划编码
+     */
+    private String cityregioncode;
+
+    /**
+     * 市级行政区划名称
+     */
+    private String cityregionname;
+
+    /**
+     * 区县行政区划编码
+     */
+    private String regioncode;
+
+    /**
+     * 区县行政区划名称
+     */
+    private String regionname;
+
+    /**
+     * 所属地貌类型
+     */
+    private String dmType;
+
+    /**
+     * 水质类别
      */
     private String waquGoal;
 
@@ -58,54 +83,14 @@ public class GroundWater {
     private String wasoType;
 
     /**
-     * 主要取水用途
+     * 机电井数量
      */
-    private String wainUse;
+    private Integer jdjNumber;
 
     /**
-     * 规模以上机电井数量
+     * 取水口数量
      */
-    private Integer wellNums;
-
-    /**
-     * 范围描述
-     */
-    private String rangDesc;
-
-    /**
-     * 建设状况
-     */
-    private String consCond;
-
-    /**
-     * 投产时间
-     */
-    private java.util.Date putProdTm;
-
-    /**
-     * 运行状况
-     */
-    private String runCond;
-
-    /**
-     * 多年平均年可开采量
-     */
-    private Double avgExpYd;
-
-    /**
-     * 供水对象
-     */
-    private String wsObj;
-
-    /**
-     * 供水对象类型
-     */
-    private String wsObjTp;
-
-    /**
-     * 主要供水城镇名称
-     */
-    private String wasuTownName;
+    private Integer qskNumber;
 
     /**
      * 设计年取水量
@@ -113,62 +98,42 @@ public class GroundWater {
     private Double desInt;
 
     /**
-     * 年许可取水量
+     * 年许可取水量（开发利用情况）
      */
     private Double permInt;
 
     /**
-     * 水源地管理单位代码
+     * 投入运行年（开发利用情况）
+     */
+    private Double runYear;
+
+    /**
+     * 运行状况（开发利用情况）
+     */
+    private String runCond;
+
+    /**
+     * 主要取水用途（开发利用情况）
+     */
+    private String wainUse;
+
+    /**
+     * 管理单位代码（管理情况）
      */
     private String whsManCd;
 
     /**
-     * 水源地审批单位代码
+     * 管理单位名称（管理情况）
      */
-    private String whsApprCd;
+    private String whsManNm;
 
     /**
-     * 监控级别
+     * 所属河湖code
      */
-    private String monG;
+    private String riverLakeCode;
 
     /**
-     * 是否为应急水源地
+     * 所属河湖名称
      */
-    private String isEmg;
-
-    /**
-     * 时间戳
-     */
-    private java.util.Date ts;
-
-    /**
-     * 记录失效时间
-     */
-    private java.util.Date exprDate;
-
-    /**
-     * 备注
-     */
-    private String nt;
-
-    /**
-     * 来源部门
-     */
-    private String srcDep;
-
-    /**
-     * 来源系统
-     */
-    private String srcSys;
-
-    /**
-     * 数据插入时间
-     */
-    private String eventTime;
-
-    /**
-     * 日分区字段
-     */
-    private String pdate;
+    private String riverLakeName;
 }

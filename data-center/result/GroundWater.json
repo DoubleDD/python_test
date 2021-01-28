@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "approval_unit": "approvalUnit",
     "average_annual_runoff_depth": "averageAnnualRunoffDepth",
     "average_precipitation": "averagePrecipitation",
@@ -16,13 +17,19 @@
     "event_time": "eventTime",
     "expr_date": "exprDate",
     "from_int_dt": "fromIntDt",
+=======
+    "cityregioncode": "cityregioncode",
+    "cityregionname": "cityregionname",
+    "des_int": "desInt",
+    "dm_type": "dmType",
+>>>>>>> a2b1964 ('excel')
     "grwa_type": "grwaType",
     "gwhs_lat": "gwhsLat",
     "gwhs_loc": "gwhsLoc",
     "gwhs_long": "gwhsLong",
-    "gws_a": "gwsA",
     "gws_cd": "gwsCd",
     "gws_nm": "gwsNm",
+<<<<<<< HEAD
     "int_cd": "intCd",
     "int_nm": "intNm",
     "int_tp": "intTp",
@@ -55,13 +62,27 @@
     "wain_use": "wainUse",
     "wain_waso_name": "wainWasoName",
     "wain_waso_type": "wainWasoType",
+=======
+    "jdj_number": "jdjNumber",
+    "perm_int": "permInt",
+    "provregioncode": "provregioncode",
+    "provregionname": "provregionname",
+    "qsk_number": "qskNumber",
+    "regioncode": "regioncode",
+    "regionname": "regionname",
+    "river_lake_code": "riverLakeCode",
+    "river_lake_name": "riverLakeName",
+    "run_cond": "runCond",
+    "run_year": "runYear",
+    "wain_use": "wainUse",
+>>>>>>> a2b1964 ('excel')
     "waqu_goal": "waquGoal",
     "waso_type": "wasoType",
-    "wasu_town_name": "wasuTownName",
-    "wat_lic_code": "watLicCode",
-    "well_nums": "wellNums",
-    "whs_appr_cd": "whsApprCd",
     "whs_man_cd": "whsManCd",
+<<<<<<< HEAD
     "ws_obj": "wsObj",
     "ws_obj_tp": "wsObjTp"
+=======
+    "whs_man_nm": "whsManNm"
+>>>>>>> a2b1964 ('excel')
 }
