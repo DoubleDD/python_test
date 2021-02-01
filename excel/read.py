@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import xlrd
 import sys
 import os
@@ -19,7 +21,7 @@ config = {
     }
 }
 
-dbConfig = config['test']
+dbConfig = config['dev']
 
 
 def update(userDic={}):
