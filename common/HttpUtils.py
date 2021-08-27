@@ -2,6 +2,7 @@
 import requests as r
 import unittest
 import json
+import demjson
 
 
 class HttpUtils:
@@ -17,14 +18,17 @@ class HttpUtils:
         Returns:
             response -- [description]
         """
+        print("\n-------------------------------------------------------")
         print("\n请求url：\n"+url)
         print("\n请求数据：")
         self.logJson(jsonObj=data)
-        if hasattr(headers, 'Content-Type'):
+        if not 'Content-Type' in headers.keys():
             headers = {
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
-        response = r.post(url=url, data=data, files=files, headers=headers)
+        response = r.post(url=url, data=demjson.encode(data), files=files, headers=headers)
+        print("响应数据：")
+        self.logJson(jsonStr=response.text)
         return response
 
     def get(self, url, headers=None):
@@ -35,7 +39,7 @@ class HttpUtils:
         return response
 
     def toJsonString(self, obj):
-        return json.dumps(obj, sort_keys=True, indent=4, separators=(',', ': '))
+        return json.dumps(obj, sort_keys=True, indent=4, separators=(',', ': '),ensure_ascii=False)
 
     def fromJsonString(self, text):
         return json.loads(text)
