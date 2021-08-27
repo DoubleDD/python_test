@@ -1,8 +1,6 @@
 # -*- coding:utf-8 -*-
 import requests as r
-import unittest
 import json
-import demjson
 
 
 class HttpUtils:
@@ -21,12 +19,12 @@ class HttpUtils:
         print("\n-------------------------------------------------------")
         print("\n请求url：\n"+url)
         print("\n请求数据：")
-        self.logJson(jsonObj=data)
+        self.logJson(jsonStr=data)
         if not 'Content-Type' in headers.keys():
             headers = {
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
-        response = r.post(url=url, data=demjson.encode(data), files=files, headers=headers)
+        response = r.post(url=url, data=data, files=files, headers=headers)
         print("响应数据：")
         self.logJson(jsonStr=response.text)
         return response
